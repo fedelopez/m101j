@@ -1,6 +1,9 @@
-package com.tengen;
+package com.tengen.week1;
 
-import com.mongodb.*;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import spark.Request;
@@ -9,7 +12,10 @@ import spark.Route;
 import spark.Spark;
 
 import java.io.StringWriter;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Hello world!

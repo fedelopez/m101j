@@ -1,10 +1,8 @@
-package com.tengen;
+package com.tengen.week1;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import freemarker.template.TemplateException;
 
-import java.io.IOException;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +20,7 @@ public class HelloWorldFreemarkerStyle {
 
         StringWriter stringWriter = new StringWriter();
 
-        Map<String, Object>  map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
         map.put("name", "Freemarker!!");
 
         template.process(map, stringWriter);
