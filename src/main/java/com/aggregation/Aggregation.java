@@ -57,9 +57,7 @@ public class Aggregation {
     public int distinctCaseNames() {
         DBCollection collection = db.getCollection(collectionName);
 
-        QueryBuilder builder = QueryBuilder.start("site").is(SITE).and("project").is(PROJECT_A);
-        DBObject match = new BasicDBObject("$match", builder.get());
-
+        DBObject match = new BasicDBObject("$match", QueryBuilder.start("site").is(SITE).and("project").is(PROJECT_A).get());
         DBObject project = new BasicDBObject("$project", new BasicDBObject("_id", 0).append("casename", 1));
         DBObject groupByCaseName = new BasicDBObject("$group", new BasicDBObject("_id", "$casename"));
         DBObject groupToCountCaseNames = new BasicDBObject("$group", new BasicDBObject("_id", "null").append("total", new BasicDBObject("$sum", 1)));
