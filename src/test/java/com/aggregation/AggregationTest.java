@@ -21,7 +21,7 @@ public class AggregationTest {
 
     @Test
     public void distinctCaseNamesHuge() throws Exception {
-        int total = 1_000_000;
+        int total = 2_000_000;
 
         Aggregation aggregation = new Aggregation("test", "interpretations", total, 300);
         aggregation.populateCollection();
